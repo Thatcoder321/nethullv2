@@ -2,7 +2,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("project-modal");
     const modalContent = document.getElementById("expanded-content");
     const closeButton = document.querySelector(".close-button");
-  
+    const nerdStuffChangelog = `
+🔄 Version History for nethull.com
+
+📌 Version 2.0 – April 19, 2025
+• Full visual redesign (layout, fonts, animations)
+• Floating chatbot with GPT-4o
+• Mobile responsive redesign
+• Photos page with image expansion
+• All modals rewritten with smooth transitions
+• Internal chatbot context system
+• Nerd Stuff redesigned into proper changelog layout
+
+📌 Version 1.2 – April 15, 2025
+• Chatbot memory (remembers last 5 messages)
+• Typing indicator added
+• Dark mode now default
+• Polished Inter font applied site-wide
+• About page restructured
+• Resume & contact card added
+• New tab: Nerd Stuff
+
+📌 Version 1.1 – April 14, 2025
+• Full public launch
+• Built with HTML, CSS, JavaScript
+• GPT chatbot with daily request limits
+• Page structure: Home, Projects, About, Blog
+• Deployed to Netlify at nethull.com
+
+📌 Version 1.0 – April 13, 2025
+• Initial launch with static content
+• Same navigation layout as now
+• No chatbot or interactive features yet
+`;
     const blogData = {
       post1: {
         title: "The Journey to nethull.com",
@@ -136,22 +168,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
   
-    if (chatForm) {
-      chatForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const msg = chatInput.value.trim();
-        if (!msg) return;
+      if (chatForm) {
+        chatForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const msg = chatInput.value.trim();
+          if (!msg) return;
+      
+          const rawContext = document.querySelector('meta[name="chat-context"]')?.content || document.title;
+      
+          const fullContext = rawContext.includes("version history")
+            ? `${rawContext}\n\nHere is the full changelog:\n${nerdStuffChangelog}`
+            : rawContext;
   
         chatMessages.innerHTML += `<div><strong>You:</strong> ${msg}</div>`;
         chatInput.value = "";
   
         try {
-          const pageContext = document.title;
-          const res = await fetch("/api/chatgpt", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: msg, context: pageContext })
-          });
+            
+            const res = await fetch("/api/chatgpt", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: msg, context: fullContext })
+              });
   
           const data = await res.json();
           if (data.reply) {

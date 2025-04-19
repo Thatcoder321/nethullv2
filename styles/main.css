@@ -6,7 +6,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: #0f0f0f;
     color: #fff;
-    height: 100vh;
+    min-height: 100vh;
   }
   
   /* Header and Navigation */
@@ -485,4 +485,37 @@ body {
       font-size: 0.95rem;
       padding: 0.6rem 1rem;
     }
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 600px) {
+    .hero-left h1,
+    .last-name {
+      font-size: 2.1rem;
+      word-break: break-word;
+    }
+  
+    .hero-left p {
+      font-size: 1.2rem;
+    }
+  }
+
+
+  .photo-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .photo-thumb {
+    flex: 0 0 auto;
+    max-width: 200px;
+    border-radius: 12px;
+    scroll-snap-align: start;
   }
