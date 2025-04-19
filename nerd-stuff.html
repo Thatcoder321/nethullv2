@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nerd Stuff - Nethul</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <script src="../js/main.js" defer></script>
+  <style>
+    .changelog {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding-bottom: 4rem;
+    }
+    .changelog .card {
+      background: linear-gradient(135deg, #1e1e1e, #292929);
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      border-left: 4px solid #007aff;
+    }
+    .changelog .card h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+    .changelog .card ul {
+      padding-left: 1.2rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body class="fade-in dark">
+  <div class="site-version">nethull.com <span class="version">v2.0</span></div>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="nerd-stuff.html">Nerd-Stuff</a>
+    </nav>
+  </header>
+
+  <main class="section-wrapper">
+    <div class="projects-header">
+      <h1 class="page-title">🧠 Nerd Stuff</h1>
+      <p class="page-subtitle">All the dev logs, version history, and changelogs that made this site what it is.</p>
+    </div>
+
+    <div class="changelog">
+      <section class="card">
+        <h2>Version 2.0 - In Progress</h2>
+        <ul>
+          <li>Fully redesigned layout from scratch (new hero, spacing, layout logic)</li>
+          <li>Modal-based blog and project previews</li>
+          <li>Floating chatbot bubble with GPT-4o</li>
+          <li>New Photos page with lightbox viewer</li>
+          <li>Vercel migration complete</li>
+          <li>Chatbot now powered by OpenAI API with improved typing flow</li>
+          <li>Clean mobile responsiveness and hover effects</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Version 1.2 - April 15, 2025</h2>
+        <ul>
+          <li>Chatbot memory (remembers last 5 messages)</li>
+          <li>Typing indicator added</li>
+          <li>Dark mode is now default</li>
+          <li>Polished font using Inter</li>
+          <li>About page fully restructured</li>
+          <li>Resume and contact card added</li>
+          <li>Added a new tab: Nerd Stuff</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Version 1.1 - April 14, 2025</h2>
+        <ul>
+          <li>Full public launch</li>
+          <li>Built with HTML, CSS, and JavaScript from scratch</li>
+          <li>GPT-powered chatbot with daily request limits</li>
+          <li>Page structure: Home, Projects, About, Blog</li>
+          <li>Deployed to Netlify at nethull.com</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Version 1.0 - April 13, 2025</h2>
+        <ul>
+          <li>Initial version with all the current looks but fewer features</li>
+          <li>Deployed to Netlify at <code>nethull.com</code></li>
+          <li>Same navigation structure as now</li>
+          <li>Static content without dynamic features (mostly)</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <!-- Floating Chatbot Bubble -->
+<div id="chatbot-bubble">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" width="40" />
+  </div>
+  
+  <!-- Chatbot Modal -->
+  <div id="chatbot-container" class="hidden">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me something..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

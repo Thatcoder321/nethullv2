@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - Nethul</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="fade-in dark">
+  <div class="site-version">nethull.com <span class="version">v2.0</span></div>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="nerd-stuff.html">Nerd-Stuff</a>
+    </nav>
+  </header>
+
+  <div class="section-wrapper">
+    <div class="projects-header">
+      <h1 class="page-title">Blog</h1>
+      <p class="page-subtitle">My thoughts, experiments, and tech rants. Tap a post to read more.</p>
+    </div>
+
+    <main class="projects-grid">
+      <div class="project-card" data-id="post1">
+        <h3>⚡ The Journey to nethull.com</h3>
+        <p>How I made my personal site!(With a lot of struggles and wins).</p>
+        <p class="read-time" id="post1-read-time"></p>
+        <button class="view-project-btn">Read Post</button>
+      </div>
+
+      <div class="project-card" data-id="post2">
+        <h3>How I learned Python</h3>
+        <p>How I learned the coding language Python (In middle school!)</p>
+        <p class="read-time" id="post2-read-time"></p>
+        <button class="view-project-btn">Read Post</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Blog Modal -->
+  <div id="project-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-button">✖</button>
+      <div id="expanded-content"></div>
+    </div>
+  </div>
+
+  <!-- Chatbot Bubble -->
+  <div id="chatbot-bubble">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" width="40" />
+  </div>
+
+  <!-- Chatbot Modal -->
+  <div id="chatbot-container" class="hidden">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me something..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main Script -->
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

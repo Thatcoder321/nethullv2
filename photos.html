@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos - Nethul</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="fade-in dark">
+  <div class="site-version">nethull.com <span class="version">v2.0</span></div>
+  <header class="site-header">
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="nerd-stuff.html">Nerd-Stuff</a>
+    </nav>
+  </header>
+
+  <main class="section-wrapper">
+    <div class="projects-header">
+      <h1 class="page-title">📷 Photos</h1>
+      <p class="page-subtitle">A gallery of photos I have taken that I like</p>
+    </div>
+
+    <div class="photo-wrapper">
+      <img src="assets/images/cherry_blossom.jpeg" class="photo-thumb" alt="Cherry Blossom Tree (double flowered cherry)" />
+      <img src="assets/images/waterfall.jpeg" class="photo-thumb" alt="A waterfall(my favorite picture)"/>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div id="photo-modal" class="hidden">
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="Expanded Photo" />
+    </div>
+  </div>
+  <div id="chatbot-bubble">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" width="40" />
+  </div>
+
+  <!-- Chatbot Modal -->
+  <div id="chatbot-container" class="hidden">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me something..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+</body>
+</html>

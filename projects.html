@@ -1,0 +1,67 @@
+<!-- PATCHED projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Nethul</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="fade-in dark">
+  <nav class="site-header">
+    <div class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="nerd-stuff.html">Nerd-Stuff</a>
+    </div>
+  </nav>
+
+  <header class="projects-header">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">Here are some things I’ve built so far.</p>
+  </header>
+
+  <main class="section-wrapper">
+    <div class="projects-grid">
+      <div class="project-card" data-id="chatbot">
+        <h3>Chatbot in Python</h3>
+        <p>A GPT Powered chatbot with theme switching and more.</p>
+        <p class="read-time" id="post1-read-time"></p>
+        <button class="view-project-btn">View Project</button>
+      </div>
+      <div class="project-card" data-id="phone">
+        <h3>Python Phone</h3>
+        <p>A phone you can interact with, all in python</p>
+        <p class="read-time" id="post2-read-time"></p>
+        <button class="view-project-btn">View Project</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="project-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-button">✖</button>
+      <div id="expanded-content"></div>
+    </div>
+  </div>
+
+  <div id="chatbot-bubble">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" width="40" />
+  </div>
+
+  <div id="chatbot-container" class="hidden">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me something..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

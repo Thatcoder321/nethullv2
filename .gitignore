@@ -1,9 +1,15 @@
-# Don’t upload environment secrets
+# Ignore secrets and environment files
 .env
 
-# Vercel files
+# Vercel local settings
 .vercel
 
-# OS & editor stuff
+# OS clutter
 .DS_Store
+
+# Node dependencies (if any in future)
 node_modules/
+
+# Optional: macOS system files
+*.log
+*.swp

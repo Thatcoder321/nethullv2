@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nethul Kankanamge</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="fade-in dark">
+  <div class="site-version">nethull.com <span class="version">v2.0</span></div>
+  <nav class="site-header">
+    <div class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="photos.html">Photos</a>
+      <a href="nerd-stuff.html">Nerd-Stuff</a>
+    </div>
+  </nav>
+
+  <div class="hero-container" style="margin-top: 3rem;">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Hey, I'm Nethul <br />
+        <span class="last-name">Kankanamge</span>
+      </h1>
+      <p class="hero-subtext">I’m a young developer who loves building simple things that do cool stuff — and making the web more fun.</p>
+      <a href="projects.html" class="primary-button">
+        View My Projects <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating Chatbot Bubble -->
+  <div id="chatbot-bubble">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" width="40" />
+  </div>
+
+  <!-- Chatbot Modal -->
+  <div id="chatbot-container" class="hidden">
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask me something..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
