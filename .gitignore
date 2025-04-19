@@ -1,0 +1,9 @@
+# Don’t upload environment secrets
+.env
+
+# Vercel files
+.vercel
+
+# OS & editor stuff
+.DS_Store
+node_modules/

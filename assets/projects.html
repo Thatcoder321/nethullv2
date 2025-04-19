@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Nethul</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="fade-in dark">
+<nav class="site-header">
+    <div class="site-nav">
+        <nav class="site-nav">
+            <a href="/index.html">Home</a>
+            <a href="/assets/about.html">About</a>
+            <a href="/assets/projects.html">Projects</a>
+            <a href="/assets/blog.html">Blog</a>
+            <a href="/assets/photos.html">Photos</a>
+            <a href="/assets/nerd-stuff.html">Nerd-Stuff</a>
+          </nav>
+    </div>
+</nav>
+  <!-- Header directly styled, not wrapped -->
+  <header class="projects-header">
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">Here are some things I’ve built so far.</p>
+  </header>
+
+  <!-- Main content uses section-wrapper for nice layout -->
+  <main class="section-wrapper">
+    <div class="projects-grid">
+      <div class="project-card" data-id="chatbot">
+        <h3>Chatbot in Python</h3>
+        <p>A GPT Powered chatbot with theme switching and more.</p>
+        <p class="read-time" id="post1-read-time"></p>
+        <button class="view-project-btn">View Project</button>
+    </div>
+        <div class="project-card" data-id="phone">
+            <h3>Python Phone</h3>
+            <p>A phone you can interact with, all in python</p>
+            <p class="read-time" id="post2-read-time"></p>
+            <button class="view-project-btn">View Project</button>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal + Expanded Card -->
+  <div id="project-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-button">✖</button>
+      <div id="expanded-content"></div>
+    </div>
+  </div>
+
+  <div id="expanded-card" class="expanded-card hidden">
+    <button id="close-expanded">✖</button>
+  </div>
+  <div id="chat-toggle" class="chat-toggle">💬</div>
+
+  <!-- Chat Modal -->
+  <div id="chatbox" class="chatbox hidden">
+    <div class="chatbox-header">💬 Chat with Nethul</div>
+    <div id="chat-messages" class="chatbox-messages"></div>
+    <div class="chatbox-input-row">
+      <input type="text" id="chat-input" placeholder="Ask me anything..." />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+  <script src="../js/chatbot.js" defer></script>
+</body>
+</html>
