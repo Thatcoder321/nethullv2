@@ -542,3 +542,8 @@ body {
   .webring-container a:hover {
     text-decoration: underline;
   }
+
+  #elr {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
